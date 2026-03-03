@@ -38,3 +38,15 @@ jupyter lab
 ```
 
 Common libraries expected in this learning context: `torch`, `transformers`, `datasets`, `numpy`, `matplotlib`.
+
+## Jupyter Notebook (.ipynb) Rules
+
+`.ipynb` files are JSON. **Always verify JSON validity before committing.** Run this after creating or editing any notebook:
+
+```python
+python3 -c "import json; json.load(open('your-notebook.ipynb'))"
+```
+
+Common mistake: unescaped double quotes inside markdown cell strings. Example fix:
+- Wrong: `"（"我想找什么"）\n"`
+- Right:  `"（\"我想找什么\"）\n"`
