@@ -24,9 +24,10 @@ This repository is in early setup — no code exists yet. As learning progresses
 For Python/ML work in this repo, typical setup includes:
 
 ```bash
-# Create and activate a virtual environment
-python -m venv .venv
-source .venv/bin/activate
+# Activate the conda environment
+conda activate ~/miniforge3/envs/llm-learn
+# or
+source ~/miniforge3/bin/activate llm-learn
 
 # Install dependencies when a requirements.txt or pyproject.toml appears
 pip install -r requirements.txt
